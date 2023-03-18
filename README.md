@@ -1,4 +1,4 @@
-# bird-looking-glass
+# bird-looking-glass-proxy
 ```
 USAGE:
     bird-looking-glass-proxy [OPTIONS]
