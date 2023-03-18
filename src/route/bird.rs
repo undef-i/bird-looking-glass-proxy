@@ -16,9 +16,6 @@ pub async fn bird(_param: web::Query<Param>, _req: HttpRequest, mode: i8) -> Res
     });
     let mut connection = block_on(client.connect())?;
     let messages = block_on(connection.send_request(&_param.q))?;
-    for message in &messages {
-        println!("received message: {:?}", message);
-    }
     return Ok(messages.iter().map(|message |format!("{:?}",message)).collect::<String>());
 
 }
