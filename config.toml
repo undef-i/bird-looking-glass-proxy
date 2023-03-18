@@ -1,13 +1,9 @@
 bind_ip = "0.0.0.0"
-bind_port = 5000
+bind_port = 8000
 
 # Used to restrict access to bird-looking-glass-proxy based on source IP address.
 # Empty list = any IP is allowed to run queries.
 access_list = ["127.0.0.1"]
-
-# Used to restrict access to bird-looking-glass-proxy based on a shared secret (must also be configured in lg.cfg)
-# Empty string or unset = no shared secret is required to run queries.
-shared_secret="ThisTokenIsNotSecret"
 
 # Used as source address when running traceroute
 ipv4_source="198.51.100.42"
