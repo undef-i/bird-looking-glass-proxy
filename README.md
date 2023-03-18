@@ -17,5 +17,5 @@ OPTIONS:
 ### Tips
 The default configuration file is located at `./config.toml`, but you can customize the file location using the `-c` or `--config` parameter.
 
-## Known issues.
+## Known issues
 * Versions built with the `*-unknown-linux-gnu` toolchain may not function correctly on systems with `GLIBC` versions below `2.35`. To resolve this, use a statically linked version built with the `*-unknown-linux-musl` toolchain.
