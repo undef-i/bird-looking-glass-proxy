@@ -13,7 +13,7 @@ lazy_static! {
             .arg_from_usage("-e, --example 'Export sample config file'")
             .get_matches();
         if matches.is_present("example") {
-            println!("bind_ip = \"0.0.0.0\"\nbind_port = 5000\n\n# Used to restrict access to bird-looking-glass-proxy based on source IP address.\n# Empty list = any IP is allowed to run queries.\naccess_list = [\"127.0.0.1\"]\n\n# Used as source address when running traceroute\nipv4_source=\"198.51.100.42\"\nipv6_source=\"2001:db8:42::1\"\n\nbird_socket=\"/var/run/bird/bird.ctl\"\nbird6_socket=\"/var/run/bird/bird6.ctl\"");
+            println!("bind_ip = \"0.0.0.0\"\nbind_port = 8000\n\n# Used to restrict access to bird-looking-glass-proxy based on source IP address.\n# Empty list = any IP is allowed to run queries.\naccess_list = [\"127.0.0.1\"]\n\n# Used as source address when running traceroute\nipv4_source=\"198.51.100.42\"\nipv6_source=\"2001:db8:42::1\"\n\nbird_socket=\"/var/run/bird/bird.ctl\"\nbird6_socket=\"/var/run/bird/bird6.ctl\"");
             std::process::exit(0);
         }
         config::Config::new(matches.value_of("config").unwrap_or("config.toml"))
