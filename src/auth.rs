@@ -53,11 +53,22 @@ where
         Box::pin(async move {
             let addr = req.peer_addr().unwrap();
             let access_list = &GLOBAL_CONFIG.access_list;
-            if access_list.contains(&addr.ip().to_string()) || access_list.is_empty() {
+            let shared_secret = &GLOBAL_CONFIG.shared_secret;
+            let provided_shared_secret = req
+                .headers()
+                .get("X-Shared-Secret")
+                .map(|header| header.to_str().unwrap_or_default())
+                .unwrap_or_default();
+            if (access_list.is_empty() && shared_secret.is_empty())
+                || access_list.contains(&addr.ip().to_string())
+                || shared_secret == provided_shared_secret
+                || (access_list.is_empty() && shared_secret == provided_shared_secret)
+                || (access_list.contains(&addr.ip().to_string()) && shared_secret.is_empty())
+            {
                 Ok(svc.call(req).await?)
             } else {
                 Err(error::ErrorUnauthorized(
-                    "Your remote address is not valid!",
+                    "You do not have permission to access.",
                 ))
             }
         })
