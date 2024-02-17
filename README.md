@@ -9,7 +9,7 @@ OPTIONS:
     -h, --help             Print help information
 ```
 ## Quick Start
-0. Make sure that `bird` and `traceroute` are installed and available.
+> Make sure that `bird` and `traceroute` are installed and available.
 1. Obtain the binary executable by either downloading it from the release or compiling the project with `cargo`.
 2. Use the command `bird-looking-glass-proxy --example > config.toml` to create a template configuration file and modify it to your needs.
 3. Run the executable.
