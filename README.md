@@ -1,4 +1,4 @@
-# bird-looking-glass-proxy
+# Bird Looking Glass Proxy
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
