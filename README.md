@@ -16,7 +16,7 @@ Bird Looking Glass Proxy is a svelte web API contrived to administer BIRD and Tr
 [issues-shield]: https://img.shields.io/github/issues/undef-i/bird-looking-glass-proxy.svg?style=flat-square
 [issues-url]: https://github.com/undef-i/bird-looking-glass-proxy/issues
 [license-shield]: https://img.shields.io/github/license/undef-i/bird-looking-glass-proxy.svg?style=flat-square
-[license-url]: https://github.com/undef-i/bird-looking-glass-proxy/blob/master/LICENSE
+[license-url]: https://github.com/undef-i/bird-looking-glass-proxy/blob/main/LICENSE
 ```
 USAGE:
     bird-looking-glass-proxy [OPTIONS]
