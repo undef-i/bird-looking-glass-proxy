@@ -34,4 +34,4 @@ OPTIONS:
 * Versions built with the `*-unknown-linux-gnu` toolchain may not function correctly on systems with `GLIBC` versions below `2.35`. To resolve this, use a statically linked version built with the `*-unknown-linux-musl` toolchain.
 
 ## License
-Bird Looking Glass Proxy is licensed under the GNU General Public License v3.0 (GPLv3). Peruse the LICENSE file for details.
+Bird Looking Glass Proxy is licensed under the Mozilla Public License Version 2.0 (MPLv2). Peruse the LICENSE file for details.
